@@ -19,8 +19,6 @@ body{
 .logo h1,
 .logo h2,
 .logo h3,
-.roof-left,
-.roof-right,
 .navbar a,
 .navbar a::after,
 .card,
@@ -203,37 +201,6 @@ small,
     transform-origin:top left;
   }
 
-}
-
-/* DAKJE */
-
-.roof{
-  position:absolute;
-  top:-180px;
-  left:-70px;
-  width:100%;
-  height:50px;
-}
-
-.roof-left,
-.roof-right{
-  position:absolute;
-  top:25px;
-  width:47%;
-  height:5px;
-  background:black;
-}
-
-.roof-left{
-  right:50.5%;
-  transform:rotate(-26deg);
-  transform-origin:right center;
-}
-
-.roof-right{
-  left:49.2%;
-  transform:rotate(26deg);
-  transform-origin:left center;
 }
 
 /* TITELS */
@@ -691,13 +658,6 @@ body.scrolled .logo h3{
   color:white;
 }
 
-/* DAKJE */
-
-body.scrolled .roof-left,
-body.scrolled .roof-right{
-  background:white;
-}
-
 /* NAVBAR */
 
 body.scrolled .navbar{
@@ -815,6 +775,63 @@ body.scrolled .info-title{
 
 body.scrolled .info-text{
   color:black;
+}
+
+/* ================= STATISCHE SUBPAGINA'S ================= */
+
+.subpage .hero{
+  background:rgb(0,176,240);
+}
+
+.subpage .diagonal{
+  background:white;
+}
+
+.subpage .logo .page-hero-title{
+  color:white;
+}
+
+.subpage .blue{
+  background:white;
+  color:black;
+}
+
+.subpage .navbar{
+  top:0;
+  padding:20px 40px;
+  background:rgb(0,176,240);
+}
+
+.subpage .navbar a{
+  color:white;
+}
+
+.subpage .navbar a::after{
+  background:white;
+}
+
+.subpage .navbar-logo img{
+  content:url("../images/Icon_wit.png");
+}
+
+.subpage .card{
+  border:1px solid rgba(0,136,190,0.14);
+  background:#f7fbfd;
+  color:black;
+}
+
+.subpage .blue .check,
+.subpage .info-title,
+.subpage .legal-content h2{
+  color:rgb(0,136,190);
+}
+
+.subpage .info-text{
+  color:black;
+}
+
+.subpage .legal-updated{
+  color:#555;
 }
 
 /* CALCULATOR */
@@ -1249,6 +1266,15 @@ input:focus-visible,
   font-size:clamp(28px,4vw,55px);
 }
 
+.logo .page-hero-title{
+  margin:0;
+  max-width:100%;
+  color:black;
+  font-size:clamp(42px,6vw,83px);
+  font-weight:bold;
+  line-height:1.05;
+}
+
 body.scrolled .logo .brand-primary,
 body.scrolled .logo .brand-name,
 body.scrolled .logo .brand-location{
@@ -1307,6 +1333,10 @@ body.scrolled .logo .brand-location{
     justify-content:space-between;
     padding:12px 20px;
     background:rgb(0,176,240);
+  }
+
+  .subpage .navbar{
+    padding:12px 20px;
   }
 
   .navbar a,
@@ -1437,16 +1467,10 @@ body.scrolled .logo .brand-location{
   max-width:900px;
 }
 
-.legal-content h1{
-  margin:0 0 30px;
-  font-size:clamp(38px,5vw,58px);
-  color:#111;
-}
-
 .legal-content h2{
   margin-top:38px;
   text-align:left;
-  color:rgb(0,136,190);
+  color:white;
 }
 
 .legal-content p{
@@ -1461,6 +1485,14 @@ body.scrolled .logo .brand-location{
 .legal-updated{
   margin-top:50px;
   font-size:15px !important;
+  color:rgba(255,255,255,0.8);
+}
+
+body.scrolled .legal-content h2{
+  color:rgb(0,136,190);
+}
+
+body.scrolled .legal-updated{
   color:#555;
 }
 
