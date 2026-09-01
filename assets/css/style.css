@@ -1722,7 +1722,7 @@ body.scrolled .navbar,
 .navbar-logo{
   position:relative;
   align-self:flex-start;
-  margin:18px 0 0 clamp(24px,4vw,58px);
+  margin:26px 0 0 clamp(24px,4vw,58px);
   z-index:1;
 }
 
@@ -1766,11 +1766,7 @@ body.scrolled .navbar .nav-links a::after{
   .home-page:not(.scrolled) .navbar{
     height:76px;
     padding:0;
-    background:linear-gradient(
-      to bottom,
-      rgb(0,176,240) 0 76px,
-      transparent 76px
-    );
+    background:transparent;
   }
 
   .navbar::before{
@@ -1779,7 +1775,7 @@ body.scrolled .navbar .nav-links a::after{
   }
 
   .navbar-logo{
-    margin:10px 0 0 14px;
+    margin:16px 0 0 14px;
   }
 
   .navbar-logo img,
@@ -1788,11 +1784,19 @@ body.scrolled .navbar .nav-links a::after{
   }
 
   .nav-toggle{
-    align-self:stretch;
-    width:76px;
-    margin-left:auto;
-    background:rgb(0,176,240);
+    position:absolute;
+    top:15px;
+    right:18px;
+    width:50px;
+    height:46px;
+    margin:0;
+    color:rgb(0,82,120);
+    background:transparent;
     z-index:2;
+  }
+
+  .nav-toggle > span:not(.sr-only){
+    background:rgb(0,82,120);
   }
 
   .navbar .nav-links,
