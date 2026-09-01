@@ -1700,15 +1700,20 @@ body.scrolled .navbar,
   right:0;
   height:110px;
   padding:0;
-  background:transparent;
+  background:linear-gradient(
+    to bottom,
+    rgb(0,176,240) 0 72px,
+    transparent 72px
+  );
   isolation:isolate;
 }
 
 .navbar::before{
   content:"";
   position:absolute;
-  inset:0 auto 0 0;
+  inset:0 auto auto 0;
   width:clamp(330px,32vw,480px);
+  height:145px;
   background:rgb(0,176,240);
   clip-path:polygon(0 0,100% 0,100% 20%,0 100%);
   z-index:0;
@@ -1761,11 +1766,16 @@ body.scrolled .navbar .nav-links a::after{
   .home-page:not(.scrolled) .navbar{
     height:76px;
     padding:0;
-    background:transparent;
+    background:linear-gradient(
+      to bottom,
+      rgb(0,176,240) 0 76px,
+      transparent 76px
+    );
   }
 
   .navbar::before{
     width:240px;
+    height:105px;
   }
 
   .navbar-logo{
