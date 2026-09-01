@@ -777,6 +777,63 @@ body.scrolled .info-text{
   color:black;
 }
 
+/* ================= STATISCHE SUBPAGINA'S ================= */
+
+.subpage .hero{
+  background:rgb(0,176,240);
+}
+
+.subpage .diagonal{
+  background:white;
+}
+
+.subpage .logo .page-hero-title{
+  color:white;
+}
+
+.subpage .blue{
+  background:white;
+  color:black;
+}
+
+.subpage .navbar{
+  top:0;
+  padding:20px 40px;
+  background:rgb(0,176,240);
+}
+
+.subpage .navbar a{
+  color:white;
+}
+
+.subpage .navbar a::after{
+  background:white;
+}
+
+.subpage .navbar-logo img{
+  content:url("../images/Icon_wit.png");
+}
+
+.subpage .card{
+  border:1px solid rgba(0,136,190,0.14);
+  background:#f7fbfd;
+  color:black;
+}
+
+.subpage .blue .check,
+.subpage .info-title,
+.subpage .legal-content h2{
+  color:rgb(0,136,190);
+}
+
+.subpage .info-text{
+  color:black;
+}
+
+.subpage .legal-updated{
+  color:#555;
+}
+
 /* CALCULATOR */
 
 .price-calculator{
@@ -1218,10 +1275,6 @@ input:focus-visible,
   line-height:1.05;
 }
 
-body.scrolled .logo .page-hero-title{
-  color:black;
-}
-
 body.scrolled .logo .brand-primary,
 body.scrolled .logo .brand-name,
 body.scrolled .logo .brand-location{
@@ -1280,6 +1333,10 @@ body.scrolled .logo .brand-location{
     justify-content:space-between;
     padding:12px 20px;
     background:rgb(0,176,240);
+  }
+
+  .subpage .navbar{
+    padding:12px 20px;
   }
 
   .navbar a,
