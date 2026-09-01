@@ -1712,10 +1712,10 @@ body.scrolled .navbar,
   content:"";
   position:absolute;
   inset:0 auto auto 0;
-  width:clamp(330px,32vw,480px);
+  width:575px;
   height:145px;
   background:rgb(0,176,240);
-  clip-path:polygon(0 0,100% 0,100% 20%,0 100%);
+  clip-path:polygon(0 0,100% 0,0 100%);
   z-index:0;
 }
 
@@ -1759,6 +1759,22 @@ body.scrolled .navbar .nav-links a::after{
   background:white;
 }
 
+.subpage .navbar-logo{
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.subpage.nav-logo-visible .navbar-logo{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
 @media (max-width:900px){
   .navbar,
   body.scrolled .navbar,
@@ -1770,29 +1786,12 @@ body.scrolled .navbar .nav-links a::after{
   }
 
   .navbar::before{
-    width:240px;
+    width:417px;
     height:105px;
-    clip-path:polygon(0 0,100% 0,0 100%);
   }
 
   .navbar-logo{
     margin:16px 0 0 14px;
-  }
-
-  .subpage .navbar-logo{
-    opacity:0;
-    visibility:hidden;
-    transform:translateY(-6px);
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease,
-      visibility 0.2s ease;
-  }
-
-  .subpage.mobile-nav-logo-visible .navbar-logo{
-    opacity:1;
-    visibility:visible;
-    transform:translateY(0);
   }
 
   .navbar-logo img,

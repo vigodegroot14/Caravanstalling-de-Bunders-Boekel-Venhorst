@@ -21,20 +21,20 @@ const pageHeroTitle = document.querySelector(".page-hero-title");
 if (pageHeroTitle) {
   let logoVisibilityFrame;
 
-  const updateMobileNavLogo = () => {
+  const updateNavLogo = () => {
     logoVisibilityFrame = undefined;
     const titleIsBehindNavbar = pageHeroTitle.getBoundingClientRect().bottom <= 76;
-    document.body.classList.toggle("mobile-nav-logo-visible", titleIsBehindNavbar);
+    document.body.classList.toggle("nav-logo-visible", titleIsBehindNavbar);
   };
 
-  const requestMobileNavLogoUpdate = () => {
+  const requestNavLogoUpdate = () => {
     if (logoVisibilityFrame !== undefined) return;
-    logoVisibilityFrame = requestAnimationFrame(updateMobileNavLogo);
+    logoVisibilityFrame = requestAnimationFrame(updateNavLogo);
   };
 
-  window.addEventListener("scroll", requestMobileNavLogoUpdate, { passive: true });
-  window.addEventListener("resize", requestMobileNavLogoUpdate);
-  updateMobileNavLogo();
+  window.addEventListener("scroll", requestNavLogoUpdate, { passive: true });
+  window.addEventListener("resize", requestNavLogoUpdate);
+  updateNavLogo();
 }
 
 document.querySelectorAll(".faq-question").forEach((button, index) => {
