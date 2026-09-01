@@ -1688,3 +1688,168 @@ body.scrolled .legal-updated{
     margin-top:28px;
   }
 }
+
+/* ================= GEDEELDE NAVBAR ================= */
+
+.navbar,
+body.scrolled .navbar,
+.subpage .navbar,
+.home-page:not(.scrolled) .navbar{
+  top:0;
+  left:0;
+  right:0;
+  height:110px;
+  padding:0;
+  background:linear-gradient(
+    to bottom,
+    rgb(0,176,240) 0 72px,
+    transparent 72px
+  );
+  isolation:isolate;
+}
+
+.navbar::before{
+  content:"";
+  position:absolute;
+  inset:0 auto auto 0;
+  width:575px;
+  height:145px;
+  background:rgb(0,176,240);
+  clip-path:polygon(0 0,100% 0,0 100%);
+  z-index:0;
+}
+
+.navbar-logo{
+  position:relative;
+  align-self:flex-start;
+  margin:26px 0 0 clamp(24px,4vw,58px);
+  z-index:1;
+}
+
+.navbar-logo img,
+body.scrolled .navbar-logo img{
+  height:60px;
+  content:url("../images/Icon_wit.png");
+}
+
+.navbar .nav-links,
+body.scrolled .navbar .nav-links{
+  position:relative;
+  align-self:flex-start;
+  height:72px;
+  margin-left:auto;
+  padding:0 clamp(24px,3vw,46px);
+  gap:clamp(18px,2vw,30px);
+  background:rgb(0,176,240);
+  z-index:1;
+}
+
+.navbar .nav-links a,
+body.scrolled .navbar .nav-links a,
+.home-page:not(.scrolled) .navbar .nav-links a{
+  display:flex;
+  align-items:center;
+  color:white;
+  text-shadow:none;
+}
+
+.navbar .nav-links a::after,
+body.scrolled .navbar .nav-links a::after{
+  bottom:-7px;
+  background:white;
+}
+
+.subpage .navbar-logo{
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.subpage.nav-logo-visible .navbar-logo{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+@media (max-width:900px){
+  .navbar,
+  body.scrolled .navbar,
+  .subpage .navbar,
+  .home-page:not(.scrolled) .navbar{
+    height:76px;
+    padding:0;
+    background:transparent;
+  }
+
+  .navbar::before{
+    width:417px;
+    height:105px;
+  }
+
+  .navbar-logo{
+    margin:16px 0 0 14px;
+  }
+
+  .navbar-logo img,
+  body.scrolled .navbar-logo img{
+    height:42px;
+  }
+
+  .nav-toggle{
+    position:absolute;
+    top:15px;
+    right:18px;
+    width:50px;
+    height:46px;
+    margin:0;
+    color:rgb(0,82,120);
+    background:transparent;
+    z-index:2;
+  }
+
+  .nav-toggle > span:not(.sr-only){
+    display:none;
+  }
+
+  .nav-toggle::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:10px;
+    width:30px;
+    height:3px;
+    border-radius:3px;
+    background:rgb(0,82,120);
+    box-shadow:
+      0 -9px 0 rgb(0,82,120),
+      0 9px 0 rgb(0,82,120);
+    transform:translateY(-50%);
+  }
+
+  .navbar .nav-links,
+  body.scrolled .navbar .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    align-self:auto;
+    height:auto;
+    margin:0;
+    padding:8px 20px 20px;
+    gap:0;
+  }
+
+  .navbar .nav-links a,
+  body.scrolled .navbar .nav-links a{
+    display:block;
+  }
+
+  .navbar .nav-links a::after,
+  body.scrolled .navbar .nav-links a::after{
+    bottom:5px;
+  }
+}

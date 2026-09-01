@@ -16,6 +16,27 @@ if (navToggle && navLinks) {
   });
 }
 
+const pageHeroTitle = document.querySelector(".page-hero-title");
+
+if (pageHeroTitle) {
+  let logoVisibilityFrame;
+
+  const updateNavLogo = () => {
+    logoVisibilityFrame = undefined;
+    const titleIsBehindNavbar = pageHeroTitle.getBoundingClientRect().bottom <= 76;
+    document.body.classList.toggle("nav-logo-visible", titleIsBehindNavbar);
+  };
+
+  const requestNavLogoUpdate = () => {
+    if (logoVisibilityFrame !== undefined) return;
+    logoVisibilityFrame = requestAnimationFrame(updateNavLogo);
+  };
+
+  window.addEventListener("scroll", requestNavLogoUpdate, { passive: true });
+  window.addEventListener("resize", requestNavLogoUpdate);
+  updateNavLogo();
+}
+
 document.querySelectorAll(".faq-question").forEach((button, index) => {
   const answer = button.parentElement.querySelector(".faq-answer");
   if (answer) {
