@@ -1722,7 +1722,7 @@ body.scrolled .navbar,
 .navbar-logo{
   position:relative;
   align-self:flex-start;
-  margin:8px 0 0 clamp(24px,4vw,58px);
+  margin:18px 0 0 clamp(24px,4vw,58px);
   z-index:1;
 }
 
@@ -1779,7 +1779,7 @@ body.scrolled .navbar .nav-links a::after{
   }
 
   .navbar-logo{
-    margin:4px 0 0 14px;
+    margin:10px 0 0 14px;
   }
 
   .navbar-logo img,
