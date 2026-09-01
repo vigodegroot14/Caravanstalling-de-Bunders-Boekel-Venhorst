@@ -1249,9 +1249,19 @@ input:focus-visible,
   font-size:clamp(28px,4vw,55px);
 }
 
+.logo .page-hero-title{
+  margin:0;
+  max-width:100%;
+  color:rgb(0,176,240);
+  font-size:clamp(42px,6vw,83px);
+  font-weight:bold;
+  line-height:1.05;
+}
+
 body.scrolled .logo .brand-primary,
 body.scrolled .logo .brand-name,
-body.scrolled .logo .brand-location{
+body.scrolled .logo .brand-location,
+body.scrolled .logo .page-hero-title{
   color:white;
 }
 
@@ -1437,16 +1447,10 @@ body.scrolled .logo .brand-location{
   max-width:900px;
 }
 
-.legal-content h1{
-  margin:0 0 30px;
-  font-size:clamp(38px,5vw,58px);
-  color:#111;
-}
-
 .legal-content h2{
   margin-top:38px;
   text-align:left;
-  color:rgb(0,136,190);
+  color:white;
 }
 
 .legal-content p{
@@ -1461,6 +1465,14 @@ body.scrolled .logo .brand-location{
 .legal-updated{
   margin-top:50px;
   font-size:15px !important;
+  color:rgba(255,255,255,0.8);
+}
+
+body.scrolled .legal-content h2{
+  color:rgb(0,136,190);
+}
+
+body.scrolled .legal-updated{
   color:#555;
 }
 
