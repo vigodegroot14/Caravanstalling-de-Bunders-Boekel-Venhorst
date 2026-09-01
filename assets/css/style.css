@@ -19,8 +19,6 @@ body{
 .logo h1,
 .logo h2,
 .logo h3,
-.roof-left,
-.roof-right,
 .navbar a,
 .navbar a::after,
 .card,
@@ -203,37 +201,6 @@ small,
     transform-origin:top left;
   }
 
-}
-
-/* DAKJE */
-
-.roof{
-  position:absolute;
-  top:-180px;
-  left:-70px;
-  width:100%;
-  height:50px;
-}
-
-.roof-left,
-.roof-right{
-  position:absolute;
-  top:25px;
-  width:47%;
-  height:5px;
-  background:black;
-}
-
-.roof-left{
-  right:50.5%;
-  transform:rotate(-26deg);
-  transform-origin:right center;
-}
-
-.roof-right{
-  left:49.2%;
-  transform:rotate(26deg);
-  transform-origin:left center;
 }
 
 /* TITELS */
@@ -689,13 +656,6 @@ body.scrolled .logo h1,
 body.scrolled .logo h2,
 body.scrolled .logo h3{
   color:white;
-}
-
-/* DAKJE */
-
-body.scrolled .roof-left,
-body.scrolled .roof-right{
-  background:white;
 }
 
 /* NAVBAR */
@@ -1252,16 +1212,19 @@ input:focus-visible,
 .logo .page-hero-title{
   margin:0;
   max-width:100%;
-  color:rgb(0,176,240);
+  color:black;
   font-size:clamp(42px,6vw,83px);
   font-weight:bold;
   line-height:1.05;
 }
 
+body.scrolled .logo .page-hero-title{
+  color:black;
+}
+
 body.scrolled .logo .brand-primary,
 body.scrolled .logo .brand-name,
-body.scrolled .logo .brand-location,
-body.scrolled .logo .page-hero-title{
+body.scrolled .logo .brand-location{
   color:white;
 }
 
