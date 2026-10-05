@@ -1,0 +1,141 @@
+/* Gedeelde navigatie en blauwe titelvlakken voor de subpagina's. */
+.subpage {
+  --page-ink:#163443;
+  --page-brand:#00b0f0;
+  --page-line:#dce6eb;
+  color:var(--page-ink);
+  background:#fff;
+  line-height:1.6;
+}
+
+.subpage .navbar,
+.subpage.scrolled .navbar {
+  position:sticky;
+  top:0;
+  height:88px;
+  padding:0 max(24px, calc((100vw - 1240px) / 2));
+  background:#fff;
+  border-bottom:1px solid var(--page-line);
+}
+.subpage .navbar .nav-links,
+.subpage.scrolled .navbar .nav-links { background:#fff; }
+.subpage .navbar .nav-links a,
+.subpage.scrolled .navbar .nav-links a { color:var(--page-ink); }
+.subpage .navbar .nav-links a::after,
+.subpage.scrolled .navbar .nav-links a::after { background:#007eae; }
+.subpage .navbar .nav-links .nav-appointment,
+.subpage.scrolled .navbar .nav-links .nav-appointment { color:#fff; }
+.subpage .navbar-logo img,
+.subpage.scrolled .navbar-logo img { height:60px; content:url("../images/Icon.png"); }
+
+.subpage .hero,
+.subpage.scrolled .hero {
+  --hero-cut:28.6745vw;
+  --hero-safe:clamp(90px, calc(200px - 8vw), 150px);
+  min-height:calc(var(--hero-cut) + var(--hero-safe));
+  background:var(--page-brand);
+  clip-path:polygon(0 0, 100% 0, 100% calc(100% - var(--hero-cut)), 0 100%);
+}
+.subpage .hero-content {
+  width:min(1240px, calc(100% - 96px));
+  min-height:calc(var(--hero-cut) + var(--hero-safe));
+  padding:clamp(72px, 9vw, 128px) 0 100px;
+  align-items:flex-start;
+}
+.subpage .logo {
+  width:auto;
+  max-width:min(720px, 78%);
+  margin:0;
+  transform:none;
+}
+.subpage .logo .page-hero-title,
+.subpage.scrolled .logo .page-hero-title {
+  color:#fff;
+  font-size:clamp(42px, 5vw, 68px);
+  font-weight:650;
+  letter-spacing:-.035em;
+  line-height:1.1;
+}
+.subpage .page-hero-subtitle {
+  max-width:500px;
+  margin:18px 0 0;
+  color:var(--page-ink);
+  font-size:clamp(17px, 1.6vw, 21px);
+  font-weight:600;
+  line-height:1.5;
+}
+.subpage .diagonal,
+.subpage.scrolled .diagonal {
+  display:none;
+}
+
+.subpage .blue,
+.subpage.scrolled .blue {
+  min-height:0;
+  margin:0;
+  padding:56px 48px 90px;
+  background:#fff;
+  color:var(--page-ink);
+  clip-path:none;
+}
+.subpage .blue > .container { max-width:1240px; }
+.subpage .blue .card,
+.subpage.scrolled .blue .card {
+  background:#fff;
+  color:var(--page-ink);
+  border:1px solid var(--page-line);
+  border-radius:10px;
+  box-shadow:0 12px 30px #16344312;
+}
+.subpage .blue .card:hover { box-shadow:0 16px 32px #16344320; }
+.subpage .blue .timeline-text h2,
+.subpage .blue .contact-info h2,
+.subpage .blue .legal-content h2,
+.subpage .blue .info-title { color:#007eae; }
+.subpage .blue .timeline-year { background:var(--page-brand); color:#fff; }
+.subpage .blue .timeline-row::before { background:var(--page-brand); }
+.subpage .blue .contact-item i,
+.subpage .blue .check { color:#007eae; }
+.subpage .blue .price-row { border-color:#16344345; }
+.subpage .blue .cta-btn {
+  color:#fff;
+  background:#007eae;
+  border-radius:6px;
+  font-size:clamp(15px, 1.5vw, 19px);
+}
+.subpage .blue .cta-btn:hover { background:#00658d; }
+.subpage.scrolled .blue .price-left,
+.subpage.scrolled .blue small { color:var(--page-ink); }
+.subpage .blue .legal-updated { color:#31566a; }
+.subpage .blue .about-image,
+.subpage .blue .about-image img,
+.subpage .blue .contact-photo img,
+.subpage .blue .gallery img { border-radius:8px; }
+.subpage .blue .table-scroll,
+.subpage .blue .price-calculator { border-radius:10px; }
+.subpage .footer,
+.subpage.scrolled .footer { background:#fff; }
+.subpage .footer a,
+.subpage.scrolled .footer a { color:var(--page-ink); }
+.subpage .footer-bottom,
+.subpage.scrolled .footer-bottom { background:var(--page-brand); color:var(--page-ink); }
+
+@media (max-width:900px) {
+  .subpage .navbar,
+  .subpage.scrolled .navbar { height:72px; padding:0 24px; }
+  .subpage .navbar-logo img,
+  .subpage.scrolled .navbar-logo img { height:48px; }
+  .subpage .nav-toggle { color:var(--page-ink); }
+  .subpage .hero-content { width:calc(100% - 48px); padding:35px 0 70px; }
+  .subpage .logo { max-width:100%; }
+  .subpage .blue,
+  .subpage.scrolled .blue { padding:40px 24px 70px; }
+}
+@media (max-width:500px) {
+  .subpage .hero-content { width:calc(100% - 40px); padding-top:20px; }
+  .subpage .logo { max-width:100%; }
+  .subpage .logo .page-hero-title { font-size:clamp(32px, 9vw, 44px); }
+  .subpage .page-hero-subtitle { max-width:min(220px, 65vw); margin-top:12px; font-size:15px; }
+  .subpage .blue,
+  .subpage.scrolled .blue { padding-inline:20px; }
+}
