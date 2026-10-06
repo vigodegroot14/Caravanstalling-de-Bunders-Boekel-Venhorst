@@ -1522,7 +1522,11 @@ body.scrolled .navbar,
 .subpage .navbar-logo {
   position:relative; align-self:center; margin:0; flex-shrink:0;
   opacity:1; visibility:visible; transform:none;
+  display:flex; align-items:center; justify-content:center; width:60px; height:60px;
 }
+.navbar .navbar-logo { color:#fff; }
+.navbar-mark { display:block; width:52px; height:52px; fill:none; stroke:currentColor; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.nav-toggle .navbar-mark { width:36px; height:36px; }
 .navbar-logo img,
 body.scrolled .navbar-logo img,
 .subpage .navbar-logo img {
@@ -1566,9 +1570,10 @@ body.scrolled .navbar .nav-links .nav-appointment:hover,
   .navbar, body.scrolled .navbar, .subpage .navbar,
   .home-page:not(.scrolled) .navbar { height:72px; padding:0 24px; }
   .navbar-logo img, body.scrolled .navbar-logo img { height:48px; }
+  .navbar .navbar-logo { display:none; }
   .nav-toggle {
     position:absolute; top:13px; right:18px; width:46px; height:46px;
-    margin:0; color:#fff; background:transparent; z-index:2;
+    margin:0; padding:5px; color:#fff; background:transparent; z-index:2;
   }
   .nav-toggle > span:not(.sr-only) { background:currentColor; }
   .navbar .nav-links, body.scrolled .navbar .nav-links {
@@ -1583,3 +1588,17 @@ body.scrolled .navbar .nav-links .nav-appointment:hover,
 
 /* Houd de afspraaksectie zichtbaar onder de vaste navigatie. */
 #afspraak-maken { scroll-margin-top:110px; }
+
+/* Vaste lijniconen voorkomen emoji-weergave van pijlen op telefoons. */
+.ui-arrow {
+  display:inline-block;
+  width:1em;
+  height:1em;
+  flex-shrink:0;
+  vertical-align:-.125em;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}

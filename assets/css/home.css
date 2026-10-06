@@ -122,6 +122,9 @@
 .home-footer-bottom p { margin:0; }
 .home-footer-bottom > div { display:flex; flex-wrap:wrap; gap:20px; }
 
+@media (min-width:901px) {
+  .home-intro { grid-template-columns:minmax(0, .9fr) minmax(0, 1.15fr); }
+}
 @media (max-width:1100px) {
   .home-intro { gap:32px; }
   .home-intro-photo > img { height:440px; }
@@ -157,7 +160,7 @@
   .home-intro-photo::before { right:-12px; bottom:-12px; }
   .home-intro h1 { font-size:clamp(39px, 10vw, 54px); }
   .home-lead { margin-top:20px; }
-  .home-brand-heading + .home-lead { margin-top:104px; }
+  .home-brand-heading + .home-lead { margin-top:76px; }
   .home-actions { margin-top:24px; gap:18px 24px; }
   .home-intro-photo > img { height:auto; aspect-ratio:4/3; }
   .home-assurances { grid-template-columns:1fr; gap:12px; padding-block:22px; }
