@@ -15,7 +15,6 @@
 .page-copy { color:var(--home-muted); margin:18px 0 28px; max-width:620px; }
 .page-pricing { display:grid; grid-template-columns:1.25fr 1fr; gap:48px; align-items:start; padding-top:12px; }
 .page-vehicles { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.page-vehicles > :last-child { grid-column:auto; grid-row:auto; }
 .page-vehicles .home-vehicle { padding:22px; }
 .page-calculator { padding:32px; border:1px solid var(--home-line); border-radius:10px; background:var(--page-soft); min-width:0; }
 .subpage .page-calculator h2 { font-size:28px; margin-bottom:26px; }
@@ -93,7 +92,6 @@
   .page-vehicles dd { text-align:left; }
 }
 @media (max-width:900px) {
-  .subpage .navbar-logo img { height:48px; }
   .page-intro { padding-block:48px 36px; }
   .page-intro-split { gap:32px; }
   .page-intro-split .home-intro-photo > img { height:420px; }

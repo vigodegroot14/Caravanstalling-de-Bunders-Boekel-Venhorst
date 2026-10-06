@@ -15,18 +15,3 @@ if (navToggle && navLinks) {
     }
   });
 }
-
-document.querySelectorAll(".faq-question").forEach((button, index) => {
-  const answer = button.parentElement.querySelector(".faq-answer");
-  if (answer) {
-    answer.id = `faq-antwoord-${index + 1}`;
-    button.setAttribute("aria-controls", answer.id);
-  }
-  button.setAttribute("aria-expanded", "false");
-
-  button.addEventListener("click", () => {
-    const faqItem = button.closest(".faq-item");
-    const isOpen = faqItem.classList.toggle("active");
-    button.setAttribute("aria-expanded", String(isOpen));
-  });
-});
