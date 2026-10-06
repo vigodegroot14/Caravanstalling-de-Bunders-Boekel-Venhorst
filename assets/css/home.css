@@ -34,8 +34,24 @@
 .home-intro-photo { position:relative; margin:0; isolation:isolate; }
 .home-intro-photo::before { content:""; position:absolute; right:-16px; bottom:-16px; width:65%; aspect-ratio:var(--roof-ratio); background:var(--home-brand); clip-path:polygon(0 100%,100% 0,100% 100%); z-index:-1; }
 .home-intro-photo > img { display:block; width:100%; height:470px; object-fit:cover; object-position:58% center; border-radius:10px; }
-.home-intro-photo figcaption { position:absolute; bottom:20px; left:20px; right:20px; width:fit-content; max-width:calc(100% - 40px); display:flex; align-items:center; gap:12px; padding:11px 16px; border-radius:5px; background:#fff; font-size:13px; font-weight:600; }
+.home-intro-photo figcaption { position:absolute; z-index:2; bottom:20px; left:20px; right:20px; width:fit-content; max-width:calc(100% - 40px); display:flex; align-items:center; gap:12px; padding:11px 16px; border-radius:5px; background:#fff; font-size:13px; font-weight:600; }
 .home-intro-photo figcaption span { color:var(--home-accent); font-size:20px; }
+/* De driehoek blijft staan; bij hover komt de foto naar voren. */
+@media (hover:hover) and (pointer:fine) {
+  .home-intro-photo::before { z-index:1; pointer-events:none; }
+  .home-intro-photo > img {
+    position:relative; z-index:0;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .home-intro-photo:hover > img,
+  .home-intro-photo:focus-within > img {
+    z-index:2; transform:translate(-12px,-12px);
+    box-shadow:0 16px 32px #16344324;
+  }
+  .home-intro-photo figcaption { z-index:3; transition:transform .3s ease; }
+  .home-intro-photo:hover figcaption,
+  .home-intro-photo:focus-within figcaption { transform:translate(-12px,-12px); }
+}
 .home-assurances { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding-block:25px; border-block:1px solid var(--home-line); }
 .home-assurances p { display:flex; justify-content:center; align-items:center; gap:12px; margin:0; font-size:15px; font-weight:600; }
 .home-assurances p + p { border-left:1px solid var(--home-line); }
@@ -135,11 +151,13 @@
   .home-request-actions { justify-self:start; }
 }
 @media (max-width:650px) {
+  .home-brand-logo { width:100%; max-width:440px; margin-inline:auto; }
   .home-page .home-wrap { width:calc(100% - 40px); }
   .home-intro { grid-template-columns:1fr; gap:36px; padding-block:60px 40px; }
   .home-intro-photo::before { right:-12px; bottom:-12px; }
   .home-intro h1 { font-size:clamp(39px, 10vw, 54px); }
   .home-lead { margin-top:20px; }
+  .home-brand-heading + .home-lead { margin-top:104px; }
   .home-actions { margin-top:24px; gap:18px 24px; }
   .home-intro-photo > img { height:auto; aspect-ratio:4/3; }
   .home-assurances { grid-template-columns:1fr; gap:12px; padding-block:22px; }
