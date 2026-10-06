@@ -1513,8 +1513,8 @@ body.scrolled .navbar,
   top:0; left:0; right:0;
   height:88px;
   padding:0 max(24px, calc((100vw - 1240px) / 2));
-  background:#fff;
-  border-bottom:1px solid #dce6eb;
+  background:#00b0f0;
+  border-bottom:1px solid #ffffff40;
   isolation:isolate;
 }
 .navbar::before { content:none; }
@@ -1526,30 +1526,33 @@ body.scrolled .navbar,
 .navbar-logo img,
 body.scrolled .navbar-logo img,
 .subpage .navbar-logo img {
-  height:60px; width:auto; content:url("../images/Icon.png");
+  height:60px; width:auto; content:url("../images/Icon_wit.png");
 }
 .navbar .nav-links,
 body.scrolled .navbar .nav-links {
   position:relative; align-self:center; height:auto; margin-left:auto;
-  padding:0; gap:clamp(18px,2vw,30px); background:#fff;
+  padding:0; gap:clamp(18px,2vw,30px); background:#00b0f0;
 }
 .navbar .nav-links a,
 body.scrolled .navbar .nav-links a,
 .home-page:not(.scrolled) .navbar .nav-links a {
-  display:flex; align-items:center; color:#163443;
+  display:flex; align-items:center; color:#fff;
   font-size:15px; font-weight:600; text-shadow:none;
 }
-.navbar .nav-links a:hover { color:#007eae; }
+.navbar .nav-links a:hover { color:#fff; }
 .navbar .nav-links a::after,
 body.scrolled .navbar .nav-links a::after {
-  bottom:-8px; height:2px; background:#007eae;
+  bottom:-8px; height:2px; background:#fff;
 }
 .navbar .nav-links .nav-appointment,
-body.scrolled .navbar .nav-links .nav-appointment {
+body.scrolled .navbar .nav-links .nav-appointment,
+.home-page:not(.scrolled) .navbar .nav-links .nav-appointment {
   padding:11px 18px; gap:12px; border-radius:6px;
-  background:#007eae; color:#fff;
+  background:#fff; color:#163443;
 }
-.navbar .nav-links .nav-appointment:hover { background:#00658d; }
+.navbar .nav-links .nav-appointment:hover,
+body.scrolled .navbar .nav-links .nav-appointment:hover,
+.home-page:not(.scrolled) .navbar .nav-links .nav-appointment:hover { background:#eaf7fc; }
 .navbar .nav-links .nav-appointment::after { display:none; }
 
 /* Een vaste verhouding houdt de daklijn op alle schermen op 26 graden. */
@@ -1565,13 +1568,13 @@ body.scrolled .navbar .nav-links .nav-appointment {
   .navbar-logo img, body.scrolled .navbar-logo img { height:48px; }
   .nav-toggle {
     position:absolute; top:13px; right:18px; width:46px; height:46px;
-    margin:0; color:#163443; background:transparent; z-index:2;
+    margin:0; color:#fff; background:transparent; z-index:2;
   }
   .nav-toggle > span:not(.sr-only) { background:currentColor; }
   .navbar .nav-links, body.scrolled .navbar .nav-links {
     position:absolute; top:100%; left:0; right:0;
     align-self:auto; height:auto; margin:0; padding:12px 24px 24px; gap:0;
-    border-bottom:1px solid #dce6eb; box-shadow:0 12px 20px #16344310;
+    border-bottom:1px solid #ffffff40; box-shadow:0 12px 20px #16344310;
   }
   .navbar .nav-links a, body.scrolled .navbar .nav-links a { display:block; }
   .navbar .nav-links a::after, body.scrolled .navbar .nav-links a::after { bottom:7px; }

@@ -1,26 +1,32 @@
-function calculate(input, pricePerMeter, minimumPrice){
+const calculator = document.querySelector('#jaarprijs-calculator');
 
-  let lengthCm = parseFloat(input.value);
+if (calculator) {
+  const vehicle = calculator.querySelector('#voertuig');
+  const length = calculator.querySelector('#lengte');
+  const result = calculator.querySelector('#jaarprijs');
+  const calculation = calculator.querySelector('#berekening');
+  const error = calculator.querySelector('#lengte-fout');
+  const currency = new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' });
+  const number = new Intl.NumberFormat('nl-NL', { maximumFractionDigits: 2 });
 
-  if(isNaN(lengthCm) || lengthCm < 0){
-    lengthCm = 0;
+  function updatePrice() {
+    const valid = length.value !== '' && length.validity.valid;
+    length.setAttribute('aria-invalid', String(!valid));
+    error.hidden = valid;
+    error.textContent = valid ? '' : 'Vul een lengte in hele centimeters in, van 1 tot en met 1200 cm.';
+    if (!valid) {
+      result.textContent = '—';
+      calculation.textContent = 'Vul een geldige lengte in';
+      return;
+    }
+    const meters = Math.max(4.5, Number(length.value) / 100);
+    const rate = Number(vehicle.value);
+    result.textContent = currency.format(meters * rate);
+    calculation.textContent = `${number.format(meters)} m × ${currency.format(rate)}`;
   }
 
-  if(lengthCm > 1200){
-    input.value = 1200;
-    lengthCm = 1200;
-  }
-
-  let lengthMeters = lengthCm / 100;
-
-  let total = lengthMeters * pricePerMeter;
-
-  if(total < minimumPrice){
-    total = minimumPrice;
-  }
-
-  const result = input.parentElement.nextElementSibling;
-  result.setAttribute("aria-live", "polite");
-  result.textContent =
-    "€" + total.toFixed(2).replace(".", ",");
+  calculator.addEventListener('submit', event => event.preventDefault());
+  calculator.addEventListener('input', updatePrice);
+  calculator.addEventListener('change', updatePrice);
+  updatePrice();
 }
