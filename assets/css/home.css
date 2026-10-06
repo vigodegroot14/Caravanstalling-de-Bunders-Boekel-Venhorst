@@ -163,13 +163,28 @@
     padding-top:calc(var(--diagonal-depth) + 48px);
     padding-bottom:calc(var(--diagonal-depth) + 48px);
   }
-  .home-brand-logo { width:100%; max-width:440px; margin-inline:auto; }
+  .home-brand-logo { width:100%; max-width:440px; margin-inline:auto; filter:brightness(0) invert(1); }
   .home-page .home-wrap { width:calc(100% - 40px); }
-  .home-intro { grid-template-columns:1fr; gap:36px; padding-block:60px 40px; }
+  /* De bestaande foto en het witte logo delen op mobiel de eerste rij. */
+  .home-intro { grid-template-columns:minmax(0, 1fr); gap:0; padding-block:0 40px; }
+  .home-intro-copy { display:contents; }
+  .home-intro .home-brand-heading { grid-area:1 / 1; position:relative; z-index:1; padding-block:48px; }
+  .home-intro > .home-intro-photo {
+    grid-area:1 / 1; align-self:stretch; z-index:0;
+    width:calc(100% + 40px); margin-inline:-20px;
+  }
+  .home-intro > .home-intro-photo::before { display:none; }
+  .home-intro > .home-intro-photo > img {
+    position:absolute; inset:0; width:100%; height:100%;
+    border-radius:0; object-fit:cover; object-position:58% center;
+    filter:brightness(.48); transform:none; box-shadow:none;
+  }
+  .home-intro-copy > .home-lead { grid-area:2 / 1; }
+  .home-intro-copy > .home-actions { grid-area:3 / 1; }
   .home-intro-photo::before { right:-12px; bottom:-12px; }
   .home-intro h1 { font-size:clamp(39px, 10vw, 54px); }
   .home-lead { margin-top:20px; }
-  .home-brand-heading + .home-lead { margin-top:76px; }
+  .home-brand-heading + .home-lead { margin-top:32px; }
   .home-actions { margin-top:24px; gap:18px 24px; }
   .home-intro-photo > img { height:auto; aspect-ratio:4/3; }
   .home-assurances { grid-template-columns:1fr; gap:12px; padding-block:22px; }

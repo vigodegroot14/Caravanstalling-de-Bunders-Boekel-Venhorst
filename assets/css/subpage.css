@@ -67,7 +67,8 @@
 .page-checklist { list-style:none; margin:0; padding:0; }
 .page-checklist li { position:relative; padding:16px 0 16px 30px; border-bottom:1px solid var(--home-line); }
 .page-checklist li:first-child { padding-top:0; }
-.page-checklist li::before { content:"✓"; position:absolute; left:0; color:var(--home-accent); font-weight:700; }
+.page-checklist .home-roof-check { position:absolute; left:0; top:17px; }
+.page-checklist li:first-child .home-roof-check { top:1px; }
 .page-faq-section { border-top:1px solid var(--home-line); }
 .page-faq { border-bottom:1px solid var(--home-line); }
 .page-faq summary { display:flex; align-items:center; justify-content:space-between; gap:20px; cursor:pointer; list-style:none; padding:20px 0; font-weight:650; }
