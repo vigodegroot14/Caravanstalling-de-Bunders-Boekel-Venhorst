@@ -57,7 +57,12 @@ input:focus-visible,
 .nav-links .nav-appointment:hover { background:#eaf7fc; }
 .nav-links .nav-appointment::after { display:none; }
 .nav-toggle { display:none; border:0; border-radius:8px; background:transparent; cursor:pointer; }
-.nav-toggle .navbar-mark { width:36px; height:36px; }
+.nav-toggle .navbar-mark {
+  width:36px; height:36px;
+  transform-origin:center;
+  transition:transform .3s ease;
+}
+.nav-toggle[aria-expanded="true"] .navbar-mark { transform:rotate(180deg); }
 
 @media (max-width:900px) {
   .navbar { height:72px; padding:0 24px; flex-wrap:wrap; }
