@@ -12,7 +12,7 @@ GitHub Pages worden gepubliceerd.
 - `assets/css/subpage.css` bevat de aanvullende opmaak van de subpagina's.
 - `assets/js/navigation.js` opent en sluit het mobiele menu.
 - `assets/js/calculator.js` berekent de jaarprijs op de prijzenpagina.
-- `assets/images` bevat alleen de gebruikte foto's, het grote logo, voertuigpictogrammen
+- `assets/images` bevat alleen de gebruikte foto's, voertuigpictogrammen
   en `favicon.svg` voor het tabbladicoon. De navbar-iconen en pijlen staan als SVG in de HTML.
 - `.nojekyll` zorgt dat GitHub Pages de bestanden ongewijzigd publiceert.
 
