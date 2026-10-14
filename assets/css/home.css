@@ -1,4 +1,11 @@
 /* Homepage en gedeelde vormgeving voor alle pagina's. */
+@font-face {
+  font-family:"Bunders Rounded";
+  src:url("../fonts/nunito-labels.woff2") format("woff2");
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+}
 .home-page {
   --home-ink:#163443;
   --home-muted:#526570;
@@ -13,7 +20,7 @@
 .home-page .home-wrap { width:min(1240px, calc(100% - 96px)); margin-inline:auto; }
 .home-page h1, .home-page h2 { font-weight:650; letter-spacing:-.035em; }
 .home-page h2 { margin:0; font-size:clamp(28px, 3vw, 40px); line-height:1.2; }
-.home-page .home-eyebrow { margin:0 0 18px; color:var(--home-accent); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.home-page .home-eyebrow { margin:0 0 18px; color:var(--home-accent); font-family:"Arial Rounded MT Bold", "Bunders Rounded", Aptos, sans-serif; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 .home-section { padding-block:88px; }
 
 .home-page #inhoud { scroll-margin-top:110px; }
@@ -33,6 +40,8 @@
 .home-hero-lead { max-width:490px; margin:24px 0 0; font-size:20px; line-height:1.65; color:#fff; }
 .home-hero .home-text-link { color:#fff; text-decoration-color:#ffffffa6; }
 .home-hero .home-text-link:hover { color:#fff; text-decoration-color:#fff; }
+.home-hero .home-button { color:#fff; background:var(--home-accent); border-color:var(--home-accent); }
+.home-hero .home-button:hover { background:#006b95; border-color:#006b95; }
 .home-lead { max-width:460px; margin:24px 0 0; color:var(--home-muted); font-size:19px; line-height:1.7; }
 .home-actions { display:flex; align-items:center; flex-wrap:wrap; gap:20px 24px; margin-top:30px; }
 .home-button { display:inline-flex; justify-content:center; align-items:center; gap:18px; padding:15px 20px; border:1px solid var(--home-brand); border-radius:6px; background:var(--home-brand); color:#103040; text-decoration:none; font-size:15px; font-weight:700; line-height:1.5; transition:background .2s; }
@@ -210,12 +219,6 @@
 /* Kleine daklijnen herhalen het logo zonder de inhoud schuin te zetten. */
 .home-location-copy .home-eyebrow::before {
   content:""; display:inline-block; width:34px; height:3px;
-  margin-right:14px; vertical-align:middle; background:var(--home-brand);
+  margin-right:14px; vertical-align:middle; background:currentColor;
   transform:rotate(var(--roof-angle));
-}
-.home-request { position:relative; isolation:isolate; overflow:hidden; }
-.home-request::before {
-  content:""; position:absolute; right:0; bottom:0;
-  width:clamp(160px, 28vw, 320px); aspect-ratio:var(--roof-ratio);
-  background:#ffffff24; clip-path:polygon(0 100%,100% 0,100% 100%); z-index:-1;
 }

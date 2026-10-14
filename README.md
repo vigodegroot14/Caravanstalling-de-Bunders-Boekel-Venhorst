@@ -10,6 +10,7 @@ GitHub Pages worden gepubliceerd.
 - `assets/css/style.css` bevat de basis, toegankelijkheid, navbar en mobiele menuknop.
 - `assets/css/home.css` bevat de homepage en gedeelde vormgeving, zoals knoppen en footer.
 - `assets/css/subpage.css` bevat de aanvullende opmaak van de subpagina's.
+- `vestigingen.html` toont de huidige locatie en een duidelijk gemarkeerd voorbeeld voor een mogelijke tweede vestiging; `assets/css/vestigingen.css` verzorgt de opmaak.
 - `assets/js/navigation.js` opent en sluit het mobiele menu.
 - `assets/js/calculator.js` berekent de jaarprijs op de prijzenpagina.
 - `assets/images` bevat alleen de gebruikte foto's, voertuigpictogrammen

@@ -36,8 +36,8 @@ input:focus-visible,
   width:60px; height:60px; margin:0; flex-shrink:0;
 }
 .navbar-mark {
-  display:block; width:52px; height:52px; fill:none; stroke:currentColor;
-  stroke-width:3; stroke-linecap:round; stroke-linejoin:round;
+  display:block; width:48px; height:48px; fill:none; stroke:currentColor;
+  stroke-width:4; stroke-linecap:round; stroke-linejoin:round;
 }
 .nav-links {
   position:relative; display:flex; align-self:center; align-items:center;
