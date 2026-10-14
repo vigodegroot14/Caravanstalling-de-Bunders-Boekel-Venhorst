@@ -115,7 +115,7 @@
 .home-vehicle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:0; }
 .home-vehicle { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:24px; background:white; border:1px solid var(--home-line); border-radius:7px; }
 .home-vehicle dt { display:flex; flex-direction:column; align-items:flex-start; gap:10px; font-size:17px; font-weight:650; }
-.home-vehicle dt img { object-fit:contain; filter:brightness(0) saturate(100%) invert(55.90845%) sepia(100%) saturate(1102.98555%) hue-rotate(160.30461deg) brightness(86.58510%) contrast(120.58903%); }
+.home-vehicle dt img { object-fit:contain; filter:brightness(0) saturate(100%) invert(55.4%) sepia(100%) saturate(1102.98555%) hue-rotate(159.8deg) brightness(86.58510%) contrast(120.58903%); }
 .home-vehicle dd { margin:0; text-align:right; font-size:30px; font-weight:650; line-height:1.25; }
 .home-vehicle dd span { display:block; margin-top:6px; color:var(--home-muted); font-size:13px; font-weight:400; }
 .home-review-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:36px; }
